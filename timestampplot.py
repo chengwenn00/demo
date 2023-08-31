@@ -7,13 +7,8 @@ from bokeh.io import output_file, show
 from bokeh.layouts import gridplot
 from bokeh.models import BasicTickFormatter, ColumnDataSource, DatetimeTickFormatter, HoverTool
 
-PATH=r'C:\Users\keileong\Desktop\PMlogfiles\Navi 21 log files\PCS122 (card 12)'
-date_today=datetime.now().strftime("%Y-%m-%d") 
-
-df=pd.read_csv(r'C:\Users\keileong\Desktop\PMlogfiles\Navi 21 log files\PCS122 (card 12)\OUTPUT_clean.csv')
-df['TimeStamp']=pd.to_datetime(df['TimeStamp'], format='%Y-%m-%d %H:%M:%S.%f')
 print(df.dtypes)
-
+print()
 
 
 graph1 = figure(title = "Maximum Socket Power",
